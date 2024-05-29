@@ -10,5 +10,6 @@ class TestController extends Controller
     public function index(UserRepository $userRepository):JsonResponse
     {
         return response()->json($userRepository->showAll());
+        //
     }
 }
