@@ -9,7 +9,7 @@ interface UserRepository
 {
     public function showAll():Collection;
     public function getById(int $id):User;
-    public function getByEmail(int $id):User;
+    public function getByEmail(string $email):User;
 
     public function update(array $data):User;
     public function create(array $data):User;
