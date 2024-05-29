@@ -26,16 +26,21 @@ class UserRepository implements interfaceRepository
 
     public function update(int $id, array $data): User
     {
-        // TODO: Implement update() method.
+       $user = $this->getById($id);
+       foreach ($data as $key=>$value){
+           $user->$key = $value;
+       }
+       $user->save();
+       return $user;
     }
 
     public function create(array $data): User
     {
-        // TODO: Implement create() method.
+       return  User::create($data);
     }
 
     public function destroy(int $id): bool
     {
-        // TODO: Implement destroy() method.
+        return User::destroy($id);
     }
 }
