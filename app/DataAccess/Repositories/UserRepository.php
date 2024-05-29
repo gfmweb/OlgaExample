@@ -21,7 +21,7 @@ class UserRepository implements interfaceRepository
 
     public function getByEmail(string $email): User
     {
-        // TODO: Implement getByEmail() method.
+       return User::where('email', $email)->first();
     }
 
     public function update(int $id, array $data): User
