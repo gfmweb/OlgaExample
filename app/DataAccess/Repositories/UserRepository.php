@@ -16,7 +16,7 @@ class UserRepository implements interfaceRepository
 
     public function getById(int $id): User
     {
-        // TODO: Implement getById() method.
+        return User::find($id);
     }
 
     public function getByEmail(string $email): User
