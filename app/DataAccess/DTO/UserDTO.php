@@ -9,15 +9,15 @@ class UserDTO
     public int $id;
     public string $name;
     public string $email;
-    public  string $pats;
-    private function __construct(array $data, array $closes)
+
+    private function __construct(array $data)
     {
         $this->id = $data['id'];
         $this->name = $data['name'];
         $this->email = $data['email'];
     }
 
-    public static function makeFromModel(User $user, Closes $closes)
+    public static function makeFromModel(User $user)
     {
         return new self($user->toArray());
     }
