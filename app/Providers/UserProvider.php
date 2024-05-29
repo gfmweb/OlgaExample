@@ -3,11 +3,11 @@
 namespace App\Providers;
 
 use App\DataAccess\Interfaces\UserRepository;
-use App\DataAccess\Repositories\UserRepository as Repository;
 use Illuminate\Support\ServiceProvider;
 
 class UserProvider extends ServiceProvider
 {
+
     /**
      * Register services.
      */
@@ -21,6 +21,6 @@ class UserProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->app->bind(UserRepository::class,Repository::class);
+        //$this->app->bind(UserRepository::class,Repository::class);
     }
 }
