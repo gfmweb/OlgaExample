@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index(UserRepository $userRepository):JsonResponse
+    public function index(UserRepository $userRepository,  int $id):JsonResponse
     {
-        return response()->json($userRepository->showAll());
+        return response()->json($userRepository->getById($id));
         //
     }
 }
