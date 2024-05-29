@@ -12,7 +12,7 @@ class UserDTO
     {
         $this->id = $data['id'];
         $this->name = $data['name'];
-        $this->email = $data['emial'];
+        $this->email = $data['email'];
     }
 
     public static function makeFromModel(User $user)
